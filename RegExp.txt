@@ -24,3 +24,7 @@
 
 - Para horas en formato hh:mm:ss (24-horas):
     - (?:[01]\d|2[0123]):(?:[012345]\d):(?:[012345]\d)
+
+- Números de teléfono, con formato ddd-ddd-ddd, ddd-dd-dd-dd o sin espacios (sin prefijo):
+    - (\d{9}|\d{3}\s\d{3}\s\d{3}|\d{3}\s\d{2}\s\d{2}\s\d{2})
+
