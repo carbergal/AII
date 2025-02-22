@@ -1,0 +1,26 @@
+- Para extraer todos los números de un string:
+    - \d+
+
+- Para extraer todos los números de un string que estén al principio (tiene que empezar por un número):
+    - ^\d+
+
+- Para extraer todos los números de un string que estén al final (tiene que terminar por un número):
+    - \d+$
+
+- Para extraer todos los números de un string, separandolos por clases:
+    - (\d+)
+
+- Para extraer las sólo las letras de un string:
+    - [a-zA-Z]+
+
+- Para extraer las palabras (que sólo contengas letras) de un string, separandolas por clases:
+    - (\b[a-zA-Z]+\b)
+
+- Para comprobar emails:
+    - ^([a-z0-9_\.\+-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$
+
+- Para fechas en formato yyyy-mm-dd:
+    - ([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))
+
+- Para horas en formato hh:mm:ss (24-horas):
+    - (?:[01]\d|2[0123]):(?:[012345]\d):(?:[012345]\d)
