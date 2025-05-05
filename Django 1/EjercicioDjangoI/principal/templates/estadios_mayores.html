@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+{% block encabezado %}
+<h1> Cinco Estadios con m&aacute;s Aforo </h1>
+{% endblock %}
+
+{% block contenido %}
+	<dl>
+		{% for dato in equipos %}
+	  	<dt>
+	  		<strong>{{dato.nombre}}</strong>
+	  		<dd>
+	  		Estadio : {{dato.estadio}} ; Aforo: {{dato.aforo}}
+	    	</dd>
+	    </dt>
+		{% endfor %}
+	</dl>
+{% endblock %}

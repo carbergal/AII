@@ -1,0 +1,16 @@
+
+
+{% extends 'base.html' %}
+
+{% block encabezado %}
+<h1> Inicio </h1>
+{% endblock %}
+
+  {% block contenido %}
+    <p>Actualmente tenemos almacenadas {{temporadas|length}} temporadas: </p>
+	<dt>
+		{% for tem in temporadas %}
+	  	<dd>{{tem.anyo}}-{{tem.anyo|add:"1"}}</dd>
+		{% endfor %}
+	</dt>
+  {% endblock %}

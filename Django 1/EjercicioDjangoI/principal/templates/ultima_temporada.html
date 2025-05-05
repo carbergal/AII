@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block encabezado %}
+<h1> Partidos de la Temporada {{anyo}}-{{anyo|add:"1"}} Agrupados por Jornadas </h1>
+{% endblock %}
+
+{% block contenido %}
+			{% regroup partidos by jornada as grouped %}
+	    	{% for group in grouped %}
+		    	<h3>Jornada {{group.grouper.numero}} &nbsp &nbsp {{group.grouper.fecha}}</h3>
+		    		{% for row in group.list %}
+			    		<dd>{{row.local.nombre}} {{row.goles_local}} - {{row.goles_visitante}} {{row.visitante.nombre}} </dd>	   
+					{% endfor %}
+	    	{% endfor %}
+{% endblock %}

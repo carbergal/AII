@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block encabezado %}
+<h1> Listado de Equipos </h1>
+{% endblock %}
+
+{% block contenido %}
+	<dl>
+		{% for dato in datos %}
+	  	<dd>
+	  		<a href='equipo/{{dato.id}}'>{{dato.nombre}}</a><br>
+	    </dd>
+		{% endfor %}
+	</dl>
+{% endblock %}
